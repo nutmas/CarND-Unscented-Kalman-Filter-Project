@@ -7,8 +7,9 @@
 
 [image1]: ./support/SimulatorStartup.png "Simulator Startup Window"
 [image2]: ./support/EKFRunning.png " Simulator Results"
-[image3]: ./support/LaserNIS_Graph.png " Dataset 1 Results"
-[image4]: ./support/RadarNIS_Graph.png " Dataset 2 Results"
+[image3]: ./support/TuningGraphs.png " Tuning Results"
+[image4]: ./support/LaserNIS_Graph.png " Dataset 1 Results"
+[image5]: ./support/RadarNIS_Graph.png " Dataset 2 Results"
 
 
 ## Overview
@@ -97,49 +98,7 @@ Table 1: Noise Parameter Tuning
 Tables show the Longitudinal and Yaw Acceleration noise parameters.
 The first column of position values are results for dataset1 and next set are for dataset2.
 
-P Identity = 0.2
-
-|id| long | yaw |  px  |  py  |  vx  |  vy  ||  px  |  py  |  vx  |  vy  ||
-|---- | :----:| :--------:|:----:|:----:|:----:|:----:||:----:|:----:|:----:|:----:||
-|1.   | 3.0   | 1.0       |0.0746|0.0843|0.3311|0.2293|✓|0.0872|0.0923|0.7609|0.5309|2/4|
-|2.   | 1.5   | 0.5       |0.0708|0.0841|0.3205|0.1967|✓|0.0946|0.0954|0.7657|0.5206|1/4|
-|3.   | 0.2   | 0.2       |0.0747|0.0977|0.3412|0.2147|✓|0.1199|0.1071|0.7937|0.5158|X|
-|4.   | 2.0   | 0.75      |0.0719|0.0817|0.3227|0.2071|✓|0.0909|0.0925|0.7628|0.5189|1/4|
-
-P Identity = 1.0
-
-|id| long | yaw |  px  |  py  |  vx  |  vy  ||  px  |  py  |  vx  |  vy  ||
-|---- | :----:| :--------:|:----:|:----:|:----:|:----:||:----:|:----:|:----:|:----:||
-|1.   | 2.0   | 0.75      |0.0703|0.0833|0.3423|0.2251|✓|0.0712|0.0719|0.6224|0.2856|3/4|
-|2.   | 1.0   | 0.5       |0.0661|0.0827|0.3323|0.2146|✓|0.0678|0.0662|0.6185|0.2651|3/4|
-|3.   | 5.0   | 0.5       |0.0770|0.0870|0.3813|0.2721|✓|0.0778|0.0809|0.6386|0.3287|2/4|
-
-P Identity = 1.5
-
-|id| long | yaw |  px  |  py  |  vx  |  vy  ||  px  |  py  |  vx  |  vy  ||
-|---- | :----:| :--------:|:----:|:----:|:----:|:----:||:----:|:----:|:----:|:----:||
-|1.   | 1.0   | 0.5       |0.0661|0.0839|0.3674|0.2496|✓|0.0650|0.0649|0.5668|0.2248|3/4|
-|2.   | 1.0   | 0.3       |0.0700|0.0848|0.3749|0.2617|✓|0.0682|0.0695|0.5699|0.2373|3/4|
-|3.   | 1.0   | 0.75      |0.0649|0.0841|0.3674|0.2485|✓|0.0642|0.0640|0.5677|0.2254|3/4|
-
-P Identity = 2.0
-
-|id| long | yaw |  px  |  py  |  vx  |  vy  ||  px  |  py  |  vx  |  vy  ||
-|---- | :----:| :--------:|:----:|:----:|:----:|:----:||:----:|:----:|:----:|:----:||
-|1.   | 1.0   | 0.5       |0.0661|0.0850|0.3862|0.2825|✓|0.0648|0.0652|0.5301|0.2372|3/4|
-|2.   | 1.0   | 0.75      |0.0649|0.0849|0.3862|0.2806|✓|0.0640|0.0664|0.5311|0.2366|3/4|
-
-P Identity = 3.0
-
-|id| long | yaw |  px  |  py  |  vx  |  vy  ||  px  |  py  |  vx  |  vy  ||
-|---- | :----:| :--------:|:----:|:----:|:----:|:----:||:----:|:----:|:----:|:----:||
-|1.   | 1.0   | 0.5       |0.0662|0.0841|0.4462|0.3220|2/4|0.0653|0.0651|0.6058|0.3751|2/4|
-
-P Identity = [2.0,1.0,2.0,1.0,1.0]
-
-|id| long | yaw |  px  |  py  |  vx  |  vy  ||  px  |  py  |  vx  |  vy  ||
-|---- | :----:| :--------:|:----:|:----:|:----:|:----:||:----:|:----:|:----:|:----:||
-|1.   | 1.0   | 0.5       |0.0660|0.0829|0.3895|0.2180|✓|0.0675|0.0651|0.6108|0.2438|3/4|
+![alt text][image3]
 
 ---
 
@@ -160,12 +119,12 @@ A large amount of values above this threshold would indicate predicted values ar
 Laser is 2 degrees of freedom, 95% chi-squared = 5.991
 The graphs below shows the results for both datasets.
 
-![alt text][image3]
+![alt text][image4]
 
 Radar is 3 degrees of freedom, 95% chi-squared = 7.815
 The graphs below shows the results for both datasets.
 
-![alt text][image4]
+![alt text][image5]
 
 For both laser and radar the consistency check results appear to be good. They are not above the chi-squared value and do not gather near the 0 axis.
 
